@@ -1,13 +1,14 @@
 import { Start } from './scenes/Start.js';
 import { Round1 } from './scenes/Round1.js';
+import { Lobby } from './scenes/Lobby.js';
 
 const config = {
     type: Phaser.AUTO,
     title: 'Overlord Rising',
     description: '',
     parent: 'game-container',
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 1080,
     physics: {
         default: 'arcade', // ← 여기서 아케이드 물리 엔진 사용을 명시
         arcade: {
@@ -18,7 +19,7 @@ const config = {
     backgroundColor: '#FFFFFF',
     pixelArt: false,
     scene: [
-        Start,Round1
+        Start,Round1,Lobby
     ],
     scale: {
         mode: Phaser.Scale.FIT,

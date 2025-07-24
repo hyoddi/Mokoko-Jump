@@ -6,7 +6,7 @@ export class Round1 extends Phaser.Scene {
 
     preload() {
         this.load.image('ground', 'assets/ground.jpg');
-        this.load.image('mokoko', 'assets/mokoko_original.png');
+        this.load.image('mokoko_original', 'assets/mokoko_original.png');
         this.load.image('star', 'assets/star.png');
         this.load.image('doubleUp', 'assets/doubleUp.png');
     }
@@ -34,7 +34,7 @@ export class Round1 extends Phaser.Scene {
 
         this.grounds.push(ground1, ground2); // 배열에 집어넣기
 
-        this.mokoko = this.physics.add.image(400, 400, 'mokoko');
+        this.mokoko = this.physics.add.image(400, 400, 'mokoko_original');
         this.mokoko.setScale(0.25);
         this.mokoko.setCollideWorldBounds(true);
         this.mokoko.setGravityY(1000);

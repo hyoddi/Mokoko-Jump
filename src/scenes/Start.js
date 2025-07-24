@@ -29,5 +29,18 @@ export class Start extends Phaser.Scene {
         this.startButton.on('pointerdown', () => {
             this.scene.start('Round1'); // 'NextScene'은 다음 씬 이름으로 변경
         });
+
+
+
+        this.lobbyButton = this.add.text(300, 450, 'Lobby', {
+            fontSize: '48px',
+            color: '#ffffff',
+            backgroundColor: '#000000',
+            padding: { x: 20, y: 10 },
+        }).setOrigin(0.5).setInteractive();
+
+        this.lobbyButton.on('pointerdown', () => {
+            this.scene.start('Lobby'); //
+        });
     }
 }
